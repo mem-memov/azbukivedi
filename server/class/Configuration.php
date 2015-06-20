@@ -3,9 +3,9 @@ class Configuration implements IConfiguration {
     
     private $settings;
     
-    public function __construct(array $settings) {
+    public function __construct($configurationPath) {
         
-        $this->settings = $settings;
+        $this->settings = require_once($configurationPath);
         
     }
     
